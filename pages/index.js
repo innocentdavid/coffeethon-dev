@@ -6,11 +6,11 @@ export default function Home() {
     <>
       <header className="py-[50px]" style={{ backgroundImage: 'url("images/headerBG.png")' }}>
         <Nav />
-        <div className="flex justify-between items-center gap-32 py-24">
+        <div className="flex justify-between items-center gap-5 lg:gap-32 py-24">
           <div className="">
             {
               // eslint-disable-next-line @next/next/no-img-element
-              <img src="/images/01.png" alt="" height="75px" width='609px' />}
+              <img src="/images/01.png" alt="" className="" />}
           </div>
           <div className="text-center">
             <div className="">
@@ -22,7 +22,7 @@ export default function Home() {
           <div className="">
             {
               // eslint-disable-next-line @next/next/no-img-element
-              <img src="/images/01.png" alt="" height="75px" width='609px' />}
+              <img src="/images/01.png" alt="" />}
           </div>
         </div>
         <div className="flex flex-col justify-center items-center">
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="p-[250px]flex justify-center bg-white text-[#243746] py-32 px-[30%]">
+      <section className="bg-white text-[#243746] py-20 lg:py-32 px-[5%] md:px-[10%] lg:px-[30%]">
         <div className="">
           {
             // eslint-disable-next-line @next/next/no-img-element
@@ -49,7 +49,7 @@ export default function Home() {
           تحدي تقني يقام لمدة يومين في الرياض وفي إطار القهوة للمساهمة في مبادرة عام القهوة السعودية 2022، وللخروج بمشاريع من المشاركين تخدم هذا المجال، وليكون أيضا لقاء للمهتمين في مجال القهوة ومجال المسابقات والفعاليات التقنية من الرياض وباقي مدن المملكة العربية السعودية.
         </p>
 
-        <div className="flex justify-center gap-32 my-10">
+        <div className="flex justify-center gap-10 md:gap-32 my-10">
           <div className="flex flex-col items-center gap-3">
             <div className="">
               {
@@ -73,19 +73,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-[150px] bg-[#1D3145] text-white">
+      <section className="py-20 lg:py-[150px] bg-[#1D3145] text-white">
         <div className="flex justify-end">
           <div className="flex gap-5 items-center">
             <span>سير الهاكاثون</span>
             <div className="">
               {
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src="/images/s3bar1.svg" alt="" width="190px" />}
+                <img src="/images/s3bar1.svg" alt="" width="100px" />}
             </div>
           </div>
         </div>
 
-        <div className="mt-20 px-20">
+        <div className="mt-14 lg:mt-20 px-8 lg:px-20">
           <div className="">
             {
               // eslint-disable-next-line @next/next/no-img-element
@@ -93,18 +93,18 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-end -mt-[50px] mb-24">
+        <div className="flex justify-end lg:-mt-[50px] mb-24">
           <div className="flex gap-5 items-center">
             <span>مسارات الهاكاثون</span>
             <div className="">
               {
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src="/images/s3bar1.svg" alt="" width="190px" />}
+                <img src="/images/s3bar1.svg" alt="" width="100px" />}
             </div>
           </div>
         </div>
 
-        <div className="flex gap-5 px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-10">
           <Card1 key={11} />
           <Card1 key={22} />
           <Card1 key={33} />
@@ -115,16 +115,16 @@ export default function Home() {
       <section className="py-[90px] bg-white text-[#243746]">
         <div className="flex justify-end">
           <div className="flex gap-5 items-center">
-            <span>ورش العمل </span>
+            <span className="font-bold text-xl">ورش العمل </span>
             <div className="">
               {
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src="/images/s3bar1.svg" alt="" width="190px" />}
+                <img src="/images/s3bar1.svg" alt="" width="100px" />}
             </div>
           </div>
         </div>
 
-        <div className="mt-10 px-20 grid grid-cols-3 gap-32 my-20">
+        <div className="mt-16 lg:mt-10 px-5 lg:px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-32 my-20">
           <Card2 />
           <Card2 />
           <Card2 />
@@ -132,16 +132,16 @@ export default function Home() {
 
         <div className="flex justify-end">
           <div className="flex gap-5 items-center">
-            <span>الجوائز</span>
+            <span className="font-bold text-xl">الجوائز</span>
             <div className="">
               {
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src="/images/s3bar1.svg" alt="" width="190px" />}
+                <img src="/images/s3bar1.svg" alt="" width="100px" />}
             </div>
           </div>
         </div>
 
-        <div className="flex items-center justify-between px-[350px] mt-28 text-[#243746]">
+        <div className="flex flex-col md:flex-row gap-16 md:gap-0 items-center justify-between px-10 md:px-28 lg:px-[350px] mt-28 text-[#243746]">
           <div className="flex flex-col justify-center items-center">
             <div className="">
               {
@@ -150,7 +150,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center mt-3 gap-1">
               <h1 className="font-[800] text-xl">40.000</h1>
-              <p className="">sdk sdlkjasdl</p>
+              <p className="">ريال سعودي</p>
             </div>
           </div>
           <div className="flex flex-col justify-center items-center">
@@ -160,8 +160,8 @@ export default function Home() {
                 <img src="/images/sec4num2.svg" alt="" width="70px" />}
             </div>
             <div className="flex flex-col items-center mt-3 gap-1">
-              <h1 className="font-[800] text-xl">40.000</h1>
-              <p className="">sdk sdlkjasdl</p>
+              <h1 className="font-[800] text-xl">50.000</h1>
+              <p className="">ريال سعودي</p>
             </div>
           </div>
           <div className="flex flex-col justify-center items-center">
@@ -171,18 +171,18 @@ export default function Home() {
                 <img src="/images/sec4num1.svg" alt="" width="70px" />}
             </div>
             <div className="flex flex-col items-center mt-3 gap-1">
-              <h1 className="font-[800] text-xl">40.000</h1>
-              <p className="">sdk sdlkjasdl</p>
+              <h1 className="font-[800] text-xl">80.000</h1>
+              <p className="">ريال سعودي</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="relative bg-[#1D3145] text-white py-[24px] px-[25%] flex justify-center overflow-hidden">
-        <div className="absolute top-0 left-0">
+      <section className="relative bg-[#1D3145] text-white py-[24px] px-5 md:px-[10%] flex justify-center overflow-hidden">
+        <div className="absolute top-0 left-0 hidden md:block">
           {
             // eslint-disable-next-line @next/next/no-img-element
-            <img src="/images/sect5LBar.png" alt="" />}
+            <img src="/images/sect5LBar.png" alt="" className="w-[70px]" />}
         </div>
         <div className="my-20">
           <div className="">
@@ -198,12 +198,12 @@ export default function Home() {
               <div className="py-3 px-6 bg-[#E7004C] rounded-[38px] text-white">التسجيل</div>
             </div>
           </div>
-          <div className="mt-[200px]">
+          <div className="mt-[100px] lg:mt-[200px]">
             <div className="py-5 text-center w-full bg-white text-[#E7004C] text-2xl font-bold">تشكيل الفرق</div>
             <p className="mt-4" dir="rtl">بعد تسجيل الأفراد في المنصة وتعبئة الملف الشخصي، يتم تسجيل الفريق وفي حال كنت تبحث عن فريق فبامكانك الضغط على زر تشكيل الفرق وطلب الانضمام إلى أحد الفرق المسجلة أو إنشاء فريق جديد.</p>
             <div className="font-bold text-xl my-4" dir="rtl">خطوات التسجيل</div>
             <div className="flex justify-between items-center">
-              <div className="">
+              <div className="hidden md:block">
                 {
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src="/images/sect5box.png" alt="" width="150px" />}
@@ -230,8 +230,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-[90px] bg-white text-[#243746] flex gap-5">
-        <div className="flex-[3]" dir="rtl">
+      <section className="py-[90px] px-5 pl-0 lg:pl-5 lg:px-0 bg-white text-[#243746] flex gap-5">
+        <div className="flex-[6] lg:flex-[3]" dir="rtl">
           <h1 className="font-bold text-2xl mb-4">الاسئلة الشائعة</h1>
           <ul className="flex flex-col gap-4">
             <div className="">
@@ -290,12 +290,13 @@ export default function Home() {
             </div>
           </ul>
         </div>
-        <div className="flex-1 flex justify-end items-start">
+        <div className="flex-1 hidden md:flex justify-end items-start">
           {
             // eslint-disable-next-line @next/next/no-img-element
-            <img src="/images/s3bar1.svg" alt="" width="190px" />}
+            <img src="/images/s3bar1.svg" alt="" width="100px" />}
         </div>
       </section>
+
 
       {/* <section className="flex relative">
         <div className="">IMAGE...</div>
@@ -316,7 +317,8 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="bg-white flex gap-10 py-10 px-20 items-center">
+
+      <section className="bg-white flex flex-wrap justify-center gap-10 py-10 px-20 items-center">
         {
           // eslint-disable-next-line @next/next/no-img-element
           <img src="/images/ministry_of_culture.png" alt="" />}
@@ -331,7 +333,7 @@ export default function Home() {
           <img src="/images/sponsor.png" alt="" />}
       </section>
 
-      <footer className="bg-[#1D3145] text-white pt-10 pb-2 px-10">
+      {/* <footer className="bg-[#1D3145] text-white pt-10 pb-2 px-10">
         <div className="flex justify-center gap-20 relative">
           <div className="flex flex-col items-end">
             <div className="">تواصل معنا</div>
@@ -370,7 +372,7 @@ export default function Home() {
           <span className="font-bold"> 2022</span>
         </p>
         <p className="text-center text-[#9EA1A1] text-sm">All Rights Reserved</p>
-      </footer>
+      </footer> */}
     </>
   )
 }
@@ -382,7 +384,7 @@ const Card1 = () => {
       <div className="rounded-[7px] mt-2">
         {
           // eslint-disable-next-line @next/next/no-img-element
-          <img src="/images/various-grains-bags-grocery-store-market.png" alt="" />}
+          <img src="/images/various-grains-bags-grocery-store-market.png" alt="" className="w-full" />}
       </div>
       <div className="mt-2 font-bold text-xl text-[#E7004C] text-center">الاستيراد والتصدير</div>
       <p className="text-center mt-5">
