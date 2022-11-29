@@ -298,24 +298,26 @@ export default function Home() {
       </section>
 
 
-      {/* <section className="flex relative">
-        <div className="">IMAGE...</div>
-        <div className="">IMAGE...</div>
-        <div className="absolute top-[70%] left-[50%] -translate-x-[70%] -translate-y-[50%]">
-          <div className="border border-white p-[10px] rounded-[10px] bg-[#1D3145] text-white">
-            <h1 className="text-cente#E7004Cr text-2xl font-bold">التسجيل lksdjf</h1>
-            <form action="" className="w-[300px]" onSubmit={(e) => { e.preventDefault() }}>
-              <input type="text" className="bg-[#1D3145]/50 text-white border-none outline-none rounded-[8px] h-[40px] w-full" placeholder="sfkjd" dir="rtl" />
-              <input type="text" className="bg-[#1D3145]/50 text-white border-none outline-none rounded-[8px] my-[5px] h-[40px] w-full" placeholder="sldfkjd" dir="rtl" />
-              <textarea type="text" className="bg-[#1D3145]/50 text-white border-none outline-none rounded-[8px] h-[90px] w-full" placeholder="fkjd" dir="rtl"></textarea>
+      <section className="mx-auto relative">
+        <div className="hidden lg:flex">
+          <div className="">IMAGE...</div>
+          <div className="">IMAGE...</div>
+        </div>
+        <div className="lg:absolute top-[70%] left-[50%] lg:-translate-x-[70%] lg:-translate-y-[50%]">
+          <div className="border border-white p-[10px] rounded-[10px] bg-[#1D3145] text-white py-7">
+            <h1 className="text-center text-2xl font-bold mb-5">تواصل معنا</h1>
+            <form action="" className="flex flex-col gap-3 w-full lg:w-[300px]" onSubmit={(e) => { e.preventDefault() }}>
+              <input type="text" className="bg-[#9EA1A1]/50 text-white border-none outline-none rounded-[8px] px-5 h-[40px] w-full" placeholder="الاسم" dir="rtl" />
+              <input type="text" className="bg-[#9EA1A1]/50 text-white border-none outline-none rounded-[8px] px-5 h-[40px] w-full" placeholder="البريد الالكتروني" dir="rtl" />
+              <textarea type="text" className="bg-[#9EA1A1]/50 text-white border-none outline-none rounded-[8px] px-5 py-3 h-[90px] w-full" placeholder="رسالتك…." dir="rtl"></textarea>
 
-              <div className="flex justify-center w-full">
-                <button type="submit" className="py-3 px-5 rounded-full bg-white text-[#243746]">sldkfsdlj</button>
+              <div className="flex justify-center w-full mt-5">
+                <button type="submit" className="py-3 px-10 rounded-full bg-white text-[#E7004C]">إرسال</button>
               </div>
             </form>
           </div>
         </div>
-      </section> */}
+      </section>
 
 
       <section className="bg-white flex flex-wrap justify-center gap-10 py-10 px-20 items-center">
@@ -333,8 +335,8 @@ export default function Home() {
           <img src="/images/sponsor.png" alt="" />}
       </section>
 
-      {/* <footer className="bg-[#1D3145] text-white pt-10 pb-2 px-10">
-        <div className="flex justify-center gap-20 relative">
+      <footer className="bg-[#1D3145] text-white pt-10 pb-2 px-10">
+        <div className="flex flex-wrap justify-center gap-20 relative">
           <div className="flex flex-col items-end">
             <div className="">تواصل معنا</div>
             <div className="flex gap-3 my-3">
@@ -359,7 +361,7 @@ export default function Home() {
             <div className="">الفرق</div>
           </div>
 
-          <div className="ml-5 absolute right-20">
+          <div className="ml-5 lg:absolute right-20">
             {
               // eslint-disable-next-line @next/next/no-img-element
               <img src="/images/logo01.png" alt="" />}
@@ -372,7 +374,7 @@ export default function Home() {
           <span className="font-bold"> 2022</span>
         </p>
         <p className="text-center text-[#9EA1A1] text-sm">All Rights Reserved</p>
-      </footer> */}
+      </footer>
     </>
   )
 }

@@ -1,23 +1,64 @@
-import React from 'react'
+import Link from 'next/link'
+import React, { useState } from 'react'
 
 export default function Nav() {
-    return (
-        <div className="flex justify-between items-center text-white px-12 lg:px-[130px] text-xs">
+    const [showMobileNav, setShowMobileNav] = useState(true)
+
+    return (<>
+        {showMobileNav && <div className="fixed">
+            <div className="fixed top-0 left-0 w-full h-screen bg-black/30 backdrop-blur-sm"
+                onClick={() => setShowMobileNav(!showMobileNav)}></div>
+            <div className="fixed top-0 right-0 w-[300px] h-screen bg-white/75 py-20 px-12">
+
+                <div className="absolute top-8 left-10 font-bold py-1 px-3 bg-[#E7004C] text-white cursor-pointer"
+                    onClick={() => setShowMobileNav(!showMobileNav)}>X</div>
+                    
+                <div className="flex flex-col gap-12 font-bold text-xl" dir='rtl'>
+                    <Link href="#"
+                        className='hover:bg-[#E7004C] hover:text-white'
+                        onClick={() => setShowMobileNav(!showMobileNav)}>الاسئلة الشائعة</Link>
+                    <Link href="#"
+                        className='hover:bg-[#E7004C] hover:text-white'
+                        onClick={() => setShowMobileNav(!showMobileNav)}>تشكيل الفرق </Link>
+                    <Link href="#"
+                        className='hover:bg-[#E7004C] hover:text-white'
+                        onClick={() => setShowMobileNav(!showMobileNav)}>التسجيل</Link>
+                    <Link href="#"
+                        className='hover:bg-[#E7004C] hover:text-white'
+                        onClick={() => setShowMobileNav(!showMobileNav)}>الجوائز</Link>
+                    <Link href="#"
+                        className='hover:bg-[#E7004C] hover:text-white'
+                        onClick={() => setShowMobileNav(!showMobileNav)}>ورش العمل</Link>
+                    <Link href="#"
+                        className='hover:bg-[#E7004C] hover:text-white'
+                        onClick={() => setShowMobileNav(!showMobileNav)}>سير الهاكاثون</Link>
+                    <Link href="#"
+                        className='hover:bg-[#E7004C] hover:text-white'
+                        onClick={() => setShowMobileNav(!showMobileNav)}>نبذه عن الهاكاثون</Link>
+                </div>
+            </div>
+        </div>}
+
+        <div className="flex justify-between gap-10 items-center text-white font-bold px-12 lg:px-[110px] text-xs">
             <div className="lg:hidden">
-                <img src="/images/Icon feather-menu.png" alt="" />
+                {
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src="/images/Icon feather-menu.png" alt="" onClick={() => setShowMobileNav(!showMobileNav)} />}
             </div>
-            <div className="hidden lg:flex justify-between">
-                <div className="">الاسئلة الشائعة</div>
-                <div className="">تشكيل الفرق </div>
-                <div className="">التسجيل</div>
-                <div className="">الجوائز</div>
-                <div className="">ورش العمل</div>
-                <div className="">سير الهاكاثون</div>
-                <div className="">نبذه عن الهاكاثون</div>
+            <div className="hidden lg:flex justify-between w-full">
+                <Link href="#" className="">الاسئلة الشائعة</Link>
+                <Link href="#" className="">تشكيل الفرق </Link>
+                <Link href="#" className="">التسجيل</Link>
+                <Link href="#" className="">الجوائز</Link>
+                <Link href="#" className="">ورش العمل</Link>
+                <Link href="#" className="">سير الهاكاثون</Link>
+                <Link href="#" className="">نبذه عن الهاكاثون</Link>
             </div>
-            <div className="">
-                <img src="/images/logo01.png" alt="" width="40px" />
-            </div>
+            <Link href="/" className="">
+                {
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src="/images/logo01.png" alt="" width="40px" />}
+            </Link>
         </div>
-    )
+    </>)
 }
