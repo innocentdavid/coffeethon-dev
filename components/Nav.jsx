@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Nav() {
     return (
-        <div className="flex justify-between items-center text-white px-5 lg:px-[130px] text-xs">
+        <div className="flex justify-between items-center text-white px-12 lg:px-[130px] text-xs">
             <div className="lg:hidden">
                 <img src="/images/Icon feather-menu.png" alt="" />
             </div>
