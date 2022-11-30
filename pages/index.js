@@ -312,7 +312,7 @@ export default function Home() {
               <textarea type="text" className="bg-[#9EA1A1]/50 text-white border-none outline-none rounded-[8px] px-5 py-3 h-[90px] w-full" placeholder="رسالتك…." dir="rtl"></textarea>
 
               <div className="flex justify-center w-full mt-5">
-                <button type="submit" className="py-3 px-10 rounded-full bg-white text-[#E7004C]">إرسال</button>
+                <button className="py-3 px-10 rounded-full bg-white text-[#E7004C]">إرسال</button>
               </div>
             </form>
           </div>

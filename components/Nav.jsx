@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 
 export default function Nav() {
-    const [showMobileNav, setShowMobileNav] = useState(true)
+    const [showMobileNav, setShowMobileNav] = useState(false)
 
     return (<>
         {showMobileNav && <div className="fixed">
