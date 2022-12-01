@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 
 export default function Nav() {
     const [showMobileNav, setShowMobileNav] = useState(false)
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
 
     return (<>
         {showMobileNav && <div className="fixed">
@@ -12,7 +13,7 @@ export default function Nav() {
 
                 <div className="absolute top-8 left-10 font-bold py-1 px-3 bg-[#E7004C] text-white cursor-pointer"
                     onClick={() => setShowMobileNav(!showMobileNav)}>X</div>
-                    
+
                 <div className="flex flex-col gap-12 font-bold text-xl" dir='rtl'>
                     <Link href="#"
                         className='hover:bg-[#E7004C] hover:text-white'
@@ -41,9 +42,19 @@ export default function Nav() {
 
         <div className="flex justify-between gap-10 items-center text-white px-12">
             <div className="flex gap-5">
-                <div className="hidden lg:block">
-                    <div className="w-[140px] h-[40px] grid place-items-center text-lg rounded-[29px] bg-white text-[#243746]">تسجيل الدخول</div>
-                    <div className="w-[140px] h-[40px] grid place-items-center text-lg rounded-[29px] bg-[#E7004C] text-white">تسجيل جديد</div>
+                <div className="hidden lg:flex gap-5">
+                    {isLoggedIn ? <>
+                        <div className="w-[140px] h-[40px] cursor-pointer grid place-items-center text-lg rounded-[29px] bg-white text-[#243746]" onClick={() => setIsLoggedIn(!isLoggedIn)}>تسجيل الدخول</div>
+                        <div className="w-[140px] h-[40px] cursor-pointer grid place-items-center text-lg rounded-[29px] bg-[#E7004C] text-white">تسجيل جديد</div>
+                    </> : <>
+                        {
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img src="/images/user.svg" alt="" className='cursor-pointer' onClick={() => setIsLoggedIn(!isLoggedIn)} />}
+                        {
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img src="/images/arrow-down.svg" alt="" className='cursor-pointer' onClick={() => setIsLoggedIn(!isLoggedIn)} />}
+                    </>}
+
                 </div>
 
                 <div className="lg:hidden">
