@@ -189,14 +189,14 @@ export default function Home() {
       </section>
 
       {/* REGISTER && FORMATION OF TEAM */}
-      <section className="relative bg-[#1D3145] text-white py-[24px] px-5 md:px-[10%] lg:px-[25%] flex justify-center overflow-hidden">
+      <section id="register" className="relative bg-[#1D3145] text-white py-[24px] px-5 md:px-[10%] lg:px-[25%] flex justify-center overflow-hidden">
         <div className="absolute top-0 left-0 hidden md:block">
           {
             // eslint-disable-next-line @next/next/no-img-element
             <img src="/images/sect5LBar.png" alt="" className="w-[90px]" />}
         </div>
         <div className="my-20">
-          <div id="register" className="">
+          <div className="">
             <div className="py-5 text-center w-full bg-white text-[#E7004C] text-2xl font-bold">التسجيل</div>
             <div className="font-bold text-xl my-4" dir="rtl">شروط المشاركة</div>
             <ul className="flex flex-col gap-4" dir="rtl">
