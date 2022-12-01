@@ -44,15 +44,15 @@ export default function Nav() {
             <div className="flex gap-5">
                 <div className="hidden lg:flex gap-5">
                     {isLoggedIn ? <>
-                        <div className="w-[160px] h-[50px] cursor-pointer grid place-items-center text-lg rounded-[29px] bg-white text-[#243746]" onClick={() => setIsLoggedIn(!isLoggedIn)}>تسجيل الدخول</div>
-                        <div className="w-[160px] h-[50px] cursor-pointer grid place-items-center text-lg rounded-[29px] bg-[#E7004C] text-white">تسجيل جديد</div>
-                    </> : <>
                         {
                             // eslint-disable-next-line @next/next/no-img-element
                             <img src="/images/user.svg" alt="" className='cursor-pointer' onClick={() => setIsLoggedIn(!isLoggedIn)} />}
                         {
                             // eslint-disable-next-line @next/next/no-img-element
                             <img src="/images/arrow-down.svg" alt="" className='cursor-pointer' onClick={() => setIsLoggedIn(!isLoggedIn)} />}
+                    </> : <>
+                        <div className="w-[160px] h-[50px] cursor-pointer grid place-items-center text-lg rounded-[29px] bg-white text-[#243746]" onClick={() => setIsLoggedIn(!isLoggedIn)}>تسجيل الدخول</div>
+                        <div className="w-[160px] h-[50px] cursor-pointer grid place-items-center text-lg rounded-[29px] bg-[#E7004C] text-white">تسجيل جديد</div>
                     </>}
 
                 </div>
