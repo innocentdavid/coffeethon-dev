@@ -39,26 +39,35 @@ export default function Nav() {
             </div>
         </div>}
 
-        <div className="flex justify-between gap-10 items-center text-white font-bold px-12 lg:px-[110px] text-xs">
-            <div className="lg:hidden">
-                {
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src="/images/Icon feather-menu.png" alt="" onClick={() => setShowMobileNav(!showMobileNav)} />}
+        <div className="flex justify-between gap-10 items-center text-white px-12">
+            <div className="flex gap-5">
+                <div className="hidden lg:block">
+                    <div className="w-[140px] h-[40px] grid place-items-center text-lg rounded-[29px] bg-white text-[#243746]">تسجيل الدخول</div>
+                    <div className="w-[140px] h-[40px] grid place-items-center text-lg rounded-[29px] bg-[#E7004C] text-white">تسجيل جديد</div>
+                </div>
+
+                <div className="lg:hidden">
+                    {
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src="/images/Icon feather-menu.png" alt="" onClick={() => setShowMobileNav(!showMobileNav)} />}
+                </div>
             </div>
-            <div className="hidden lg:flex justify-between w-full">
-                <Link href="#" className="">الاسئلة الشائعة</Link>
-                <Link href="#" className="">تشكيل الفرق </Link>
-                <Link href="#" className="">التسجيل</Link>
-                <Link href="#" className="">الجوائز</Link>
-                <Link href="#" className="">ورش العمل</Link>
-                <Link href="#" className="">سير الهاكاثون</Link>
-                <Link href="#" className="">نبذه عن الهاكاثون</Link>
+            <div className="flex justify-end items-center gap-5">
+                <div className="hidden lg:flex gap-6 w-full text-lg">
+                    <Link href="#" className="">الاسئلة الشائعة</Link>
+                    <Link href="#" className="">تشكيل الفرق </Link>
+                    <Link href="#" className="">التسجيل</Link>
+                    <Link href="#" className="">الجوائز</Link>
+                    <Link href="#" className="">ورش العمل</Link>
+                    <Link href="#" className="">سير الهاكاثون</Link>
+                    <Link href="#" className="">نبذه عن الهاكاثون</Link>
+                </div>
+                <Link href="/" className="">
+                    {
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src="/images/logo01.png" alt="" width="90px" />}
+                </Link>
             </div>
-            <Link href="/" className="">
-                {
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src="/images/logo01.png" alt="" width="40px" />}
-            </Link>
         </div>
     </>)
 }

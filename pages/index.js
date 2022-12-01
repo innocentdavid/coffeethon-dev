@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useState } from "react";
 import Nav from "../components/Nav";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
           <div className="">
             {
               // eslint-disable-next-line @next/next/no-img-element
-              <img src="/images/01.png" alt="" className="" />}
+              <img src="/images/01.png" alt="" className="rotate-180" />}
           </div>
           <div className="text-center">
             <div className="">
@@ -35,7 +36,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="bg-white text-[#243746] py-20 lg:py-32 px-[5%] md:px-[10%] lg:px-[30%]">
+      <section className="bg-white text-[#243746] py-20 lg:py-32 px-[5%] md:px-[10%] lg:px-[20%]">
         <div className="">
           {
             // eslint-disable-next-line @next/next/no-img-element
@@ -80,7 +81,7 @@ export default function Home() {
             <div className="">
               {
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src="/images/s3bar1.svg" alt="" width="100px" />}
+                <img src="/images/s3bar2.png" alt="" className="h-[30px]" />}
             </div>
           </div>
         </div>
@@ -99,7 +100,7 @@ export default function Home() {
             <div className="">
               {
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src="/images/s3bar1.svg" alt="" width="100px" />}
+                <img src="/images/s3bar2.png" alt="" className="h-[30px]" />}
             </div>
           </div>
         </div>
@@ -119,7 +120,7 @@ export default function Home() {
             <div className="">
               {
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src="/images/s3bar1.svg" alt="" width="100px" />}
+                <img src="/images/s3bar2.png" alt="" className="h-[30px]" />}
             </div>
           </div>
         </div>
@@ -136,7 +137,7 @@ export default function Home() {
             <div className="">
               {
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src="/images/s3bar1.svg" alt="" width="100px" />}
+                <img src="/images/s3bar2.png" alt="" className="h-[30px]" />}
             </div>
           </div>
         </div>
@@ -178,11 +179,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative bg-[#1D3145] text-white py-[24px] px-5 md:px-[10%] flex justify-center overflow-hidden">
+      <section className="relative bg-[#1D3145] text-white py-[24px] px-5 md:px-[10%] lg:px-[25%] flex justify-center overflow-hidden">
         <div className="absolute top-0 left-0 hidden md:block">
           {
             // eslint-disable-next-line @next/next/no-img-element
-            <img src="/images/sect5LBar.png" alt="" className="w-[70px]" />}
+            <img src="/images/sect5LBar.png" alt="" className="w-[90px]" />}
         </div>
         <div className="my-20">
           <div className="">
@@ -194,7 +195,7 @@ export default function Home() {
               <li>أن يكون الفريق حاضرا في مقر الهاكاثون وقت إقامة الهاكاثون (28-29 ديسمبر).</li>
               <li>أن تكون فكرة المشاركة في قطاع القهوة ولا تخرج عنها.</li>
             </ul>
-            <div className="flex justify-center mt-10">
+            <div className="flex justify-center mt-20">
               <div className="py-3 px-6 bg-[#E7004C] rounded-[38px] text-white">التسجيل</div>
             </div>
           </div>
@@ -204,9 +205,9 @@ export default function Home() {
             <div className="font-bold text-xl my-4" dir="rtl">خطوات التسجيل</div>
             <div className="flex justify-between items-center">
               <div className="hidden md:block">
-                {
+                {/* {
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src="/images/sect5box.png" alt="" width="150px" />}
+                  <img src="/images/sect5box.png" alt="" width="150px" />} */}
               </div>
               <ul className="flex flex-col gap-4 items-end">
                 <li>
@@ -223,7 +224,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className="flex justify-center mt-10">
+            <div className="flex justify-center mt-20">
               <div className="py-3 px-6 bg-[#E7004C] rounded-[38px] text-white">تشكيل الفرق</div>
             </div>
           </div>
@@ -232,91 +233,65 @@ export default function Home() {
 
       <section className="py-[90px] px-5 pl-0 lg:pl-5 lg:px-0 bg-white text-[#243746] flex gap-5">
         <div className="flex-[6] lg:flex-[3]" dir="rtl">
-          <h1 className="font-bold text-2xl mb-4">الاسئلة الشائعة</h1>
+          <h1 className="font-bold text-2xl mb-8">الاسئلة الشائعة</h1>
           <ul className="flex flex-col gap-4">
-            <div className="">
-              <li className="font-bold text-lg">هل يمكنني المشاركة كفرد؟</li>
-              <span>
-                المشاركة في الهاكاثون تلزم وجود فريق وبامكانك البحث عن فريق في خيار تشكيل الفرق.
-                </span>
-            </div>
-            <div className="">
-              <li className="font-bold text-lg">لا يوجد لدي فريق؟</li>
-              <span>
-                بامكانك البحث عن فريق في خيار تشكيل الفرق.
-                </span>
-            </div>
-            <div className="">
-              <li className="font-bold text-lg">متى سيقام الهاكاثون؟</li>
-              <span>
-                في يومي ٤ و ٥ جمادى الآخرة.
-                </span>
-            </div>
-            <div className="">
-              <li className="font-bold text-lg">أين سيقام الهاكاثون؟</li>
-              <span>
-                في واجهة الرياض.
-                </span>
-            </div>
-            <div className="">
-              <li className="font-bold text-lg">أين ستقام ورش العمل؟</li>
-              <span>
-                ورش العمل ستقام عن بعد عبر منصة Zoom.
-                </span>
-            </div>
-            <div className="">
-              <li className="font-bold text-lg">هل حضور ورش العمل إلزامي؟</li>
-              <span>
-                لا، ولكن تفيدك ورش العمل في الحصول على الكثير من المعلومات المتعلقة بالقهوة والهاكاثون.
-                </span>
-            </div>
-            <div className="">
-              <li className="font-bold text-lg">كيف ستسلم الجوائز؟</li>
-              <span>
-                سيكون لهاكاثون القهوة حصة من المشاريع الفائزة وستوزع الجوائز على دفعات لدعم استمرارية المشروع.
-                </span>
-            </div>
-            <div className="">
-              <li className="font-bold text-lg">ما الفرص المتاحة بعد الهاكاثون؟</li>
-              <span>
-                سيتم ربط الفائزين بحاضنات ومسرعات أعمال لتدريبهم ودعم مشاريعهم وبامكانك كل المشاركين عرض مشاريعهم أمام المستثمرين المتواجدين في الهاكاثون.
-              </span>
-            </div>
-            <div className="">
-              <li className="font-bold text-lg">ما الفوائد المكتسبة من الهاكاثون؟</li>
-              <span>
-                سيحصل كل المشاركين على شهادة مشاركة وفرصة زيادة شبكة العلاقات وتعزيز الخبرات شخصية والسير الذاتية.
-              </span>
-            </div>
+            <Accordion
+              key={1}
+              question={'هل يمكنني المشاركة كفرد؟'}
+              answer={'المشاركة في الهاكاثون تلزم وجود فريق وبامكانك البحث عن فريق في خيار تشكيل الفرق.'} />
+            <Accordion
+              key={2}
+              question={'لا يوجد لدي فريق؟'}
+              answer={'بامكانك البحث عن فريق في خيار تشكيل الفرق.'} />
+            <Accordion
+              key={3}
+              question={'متى سيقام الهاكاثون؟'}
+              answer={'في يومي ٤ و ٥ جمادى الآخرة.'} />
+            <Accordion
+              key={4}
+              question={'أين سيقام الهاكاثون؟'}
+              answer={'في واجهة الرياض.'} />
+            <Accordion
+              key={5}
+              question={'أين ستقام ورش العمل؟'}
+              answer={'ورش العمل ستقام عن بعد عبر منصة Zoom.'} />
+            <Accordion
+              key={6}
+              question={'هل حضور ورش العمل إلزامي؟'}
+              answer={'لا، ولكن تفيدك ورش العمل في الحصول على الكثير من المعلومات المتعلقة بالقهوة والهاكاثون.'} />
+            <Accordion
+              key={7}
+              question={'كيف ستسلم الجوائز؟'}
+              answer={'سيكون لهاكاثون القهوة حصة من المشاريع الفائزة وستوزع الجوائز على دفعات لدعم استمرارية المشروع.'} />
+            <Accordion
+              key={8}
+              question={'ما الفرص المتاحة بعد الهاكاثون؟'}
+              answer={'سيتم ربط الفائزين بحاضنات ومسرعات أعمال لتدريبهم ودعم مشاريعهم وبامكانك كل المشاركين عرض مشاريعهم أمام المستثمرين المتواجدين في الهاكاثون.'} />
+            <Accordion
+              key={1}
+              question={'ما الفوائد المكتسبة من الهاكاثون؟'}
+              answer={'سيحصل كل المشاركين على شهادة مشاركة وفرصة زيادة شبكة العلاقات وتعزيز الخبرات شخصية والسير الذاتية.'} />
           </ul>
         </div>
         <div className="flex-1 hidden md:flex justify-end items-start">
           {
             // eslint-disable-next-line @next/next/no-img-element
-            <img src="/images/s3bar1.svg" alt="" width="100px" />}
+            <img src="/images/s3bar1.svg" alt="" className="h-[30px]" />}
         </div>
       </section>
 
 
-      <section className="mx-auto relative">
-        <div className="hidden lg:flex">
-          <div className="">IMAGE...</div>
-          <div className="">IMAGE...</div>
-        </div>
-        <div className="lg:absolute top-[70%] left-[50%] lg:-translate-x-[70%] lg:-translate-y-[50%]">
-          <div className="border border-white p-[10px] rounded-[10px] bg-[#1D3145] text-white py-7">
-            <h1 className="text-center text-2xl font-bold mb-5">تواصل معنا</h1>
-            <form action="" className="flex flex-col gap-3 w-full lg:w-[300px]" onSubmit={(e) => { e.preventDefault() }}>
-              <input type="text" className="bg-[#9EA1A1]/50 text-white border-none outline-none rounded-[8px] px-5 h-[40px] w-full" placeholder="الاسم" dir="rtl" />
-              <input type="text" className="bg-[#9EA1A1]/50 text-white border-none outline-none rounded-[8px] px-5 h-[40px] w-full" placeholder="البريد الالكتروني" dir="rtl" />
-              <textarea type="text" className="bg-[#9EA1A1]/50 text-white border-none outline-none rounded-[8px] px-5 py-3 h-[90px] w-full" placeholder="رسالتك…." dir="rtl"></textarea>
+      <section className="py-10 md:py-36 px-3 md:px-20 lgpx-32 bg-center" style={{ backgroundImage: 'url("images/Group 490.png")' }}>
+        <form action="" className="mx-auto bg-white rounded-[10px] px-[10px] py-7 text-[#1D3145] flex flex-col gap-3 w-full lg:w-[460px]" onSubmit={(e) => { e.preventDefault() }}>
+          <h1 className="text-center text-2xl font-bold mb-5">تواصل معنا</h1>
+          <input type="text" className="bg-[#9EA1A1]/50 text-white border-none outline-none rounded-[8px] px-5 h-[40px] w-full" placeholder="الاسم" dir="rtl" />
+          <input type="text" className="bg-[#9EA1A1]/50 text-white border-none outline-none rounded-[8px] px-5 h-[40px] w-full" placeholder="البريد الالكتروني" dir="rtl" />
+          <textarea type="text" className="resize-none bg-[#9EA1A1]/50 text-white border-none outline-none rounded-[8px] px-5 py-3 h-[90px] w-full" placeholder="رسالتك…." dir="rtl"></textarea>
 
-              <div className="flex justify-center w-full mt-5">
-                <button className="py-3 px-10 rounded-full bg-white text-[#E7004C]">إرسال</button>
-              </div>
-            </form>
+          <div className="flex justify-center w-full mt-5">
+            <button className="py-3 px-10 rounded-full bg-[#E7004C] text-white">إرسال</button>
           </div>
-        </div>
+        </form>
       </section>
 
 
@@ -335,45 +310,30 @@ export default function Home() {
           <img src="/images/sponsor.png" alt="" />}
       </section>
 
-      <footer className="bg-[#1D3145] text-white pt-10 pb-2 px-10">
-        <div className="flex flex-wrap justify-center gap-20 relative">
-          <div className="flex flex-col items-end">
-            <div className="">تواصل معنا</div>
-            <div className="flex gap-3 my-3">
-              <div>Contact@coffethon.com</div>
-              <div className="w-[30px] h-[30px] rounded-full bg-white text-[#243746] grid place-items-center">O</div>
-            </div>
-            <div className="flex gap-3">
-              <div>Coffeethon</div>
-              <div className="w-[30px] h-[30px] rounded-full bg-white text-[#243746] grid place-items-center">O</div>
-            </div>
-          </div>
+      <footer className="bg-[#1D3145] text-white py-5 px-10 flex justify-between items-center">
+        <div className="flex gap-5">
+          {
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src="/images/@.svg" alt="" className="w-[40px]" />}
 
-          <div className="" dir="rtl">
-            <div className="">التسجيل</div>
-            <div className="my-5">الجوائز</div>
-            <div className="">الاسئلة الشائعة</div>
-          </div>
-
-          <div className="" dir="rtl">
-            <div className="">نبذة عن الهاكاثون</div>
-            <div className="my-5">ورش العمل</div>
-            <div className="">الفرق</div>
-          </div>
-
-          <div className="ml-5 lg:absolute right-20">
-            {
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src="/images/logo01.png" alt="" />}
-          </div>
+          {
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src="/images/twitter.svg" alt="" className="w-[40px]" />}
+          
         </div>
-
-        <p className="text-center text-[#9EA1A1] text-sm mt-10">
-          <span className="font-bold">@COFFEETHON </span>
-          Copyright
-          <span className="font-bold"> 2022</span>
-        </p>
-        <p className="text-center text-[#9EA1A1] text-sm">All Rights Reserved</p>
+        <div className="flex flex-col items-center">
+          <p className="text-center text-[#9EA1A1] text-sm">
+            <span className="font-bold">@COFFEETHON </span>
+            Copyright
+            <span className="font-bold"> 2022</span>
+          </p>
+          <p className="text-center text-[#9EA1A1] text-sm">All Rights Reserved</p>
+        </div>
+        <div className="">
+          {
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src="/images/logo01.png" alt="" />}
+        </div>
       </footer>
     </>
   )
@@ -398,7 +358,7 @@ const Card1 = () => {
 
 const Card2 = () => {
   return (<>
-    <div className="flex flex-col justify-center px-10 py-[24px] bg-white border border-[#E7004C]/25 rounded-[75px]">
+    <div className="flex flex-col justify-center px-10 py-[24px] bg-white border border-[#E7004C]/25 rounded-[25px]">
       <div className="mx-auto">
         {
           // eslint-disable-next-line @next/next/no-img-element
@@ -410,4 +370,15 @@ const Card2 = () => {
       </p>
     </div>
   </>)
+}
+
+const Accordion = ({ question, answer }) => {
+  const [openAccordion, setOpenAccordion] = useState(false)
+
+  return (
+    <div className="">
+      <li className="font-bold text-lg cursor-pointer" onClick={() => setOpenAccordion(!openAccordion)}>{question}</li>
+      <span className={openAccordion ? 'visible' : 'invisible'}>{answer}</span>
+    </div>
+  )
 }
