@@ -44,8 +44,8 @@ export default function Nav() {
             <div className="flex gap-5">
                 <div className="hidden lg:flex gap-5">
                     {isLoggedIn ? <>
-                        <div className="w-[140px] h-[40px] cursor-pointer grid place-items-center text-lg rounded-[29px] bg-white text-[#243746]" onClick={() => setIsLoggedIn(!isLoggedIn)}>تسجيل الدخول</div>
-                        <div className="w-[140px] h-[40px] cursor-pointer grid place-items-center text-lg rounded-[29px] bg-[#E7004C] text-white">تسجيل جديد</div>
+                        <div className="w-[160px] h-[50px] cursor-pointer grid place-items-center text-lg rounded-[29px] bg-white text-[#243746]" onClick={() => setIsLoggedIn(!isLoggedIn)}>تسجيل الدخول</div>
+                        <div className="w-[160px] h-[50px] cursor-pointer grid place-items-center text-lg rounded-[29px] bg-[#E7004C] text-white">تسجيل جديد</div>
                     </> : <>
                         {
                             // eslint-disable-next-line @next/next/no-img-element
@@ -65,13 +65,13 @@ export default function Nav() {
             </div>
             <div className="flex justify-end items-center gap-5">
                 <div className="hidden lg:flex gap-6 w-full text-lg">
-                    <Link href="#" className="">الاسئلة الشائعة</Link>
-                    <Link href="#" className="">تشكيل الفرق </Link>
-                    <Link href="#" className="">التسجيل</Link>
-                    <Link href="#" className="">الجوائز</Link>
-                    <Link href="#" className="">ورش العمل</Link>
-                    <Link href="#" className="">سير الهاكاثون</Link>
-                    <Link href="#" className="">نبذه عن الهاكاثون</Link>
+                    <Link href="#FAQ" className="">الاسئلة الشائعة</Link>
+                    <Link href="#formation_of_team" className="">تشكيل الفرق </Link>
+                    <Link href="#register" className="">التسجيل</Link>
+                    <Link href="#award" className="">الجوائز</Link>
+                    <Link href="#workshop" className="">ورش العمل</Link>
+                    <Link href="#course" className="">سير الهاكاثون</Link>
+                    <Link href="#about" className="">نبذه عن الهاكاثون</Link>
                 </div>
                 <Link href="/" className="">
                     {

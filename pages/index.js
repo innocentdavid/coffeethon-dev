@@ -36,7 +36,8 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="bg-white text-[#243746] py-20 lg:py-32 px-[5%] md:px-[10%] lg:px-[20%]">
+      {/* ABOUT */}
+      <section id="about" className="bg-white text-[#243746] py-20 lg:py-32 px-[5%] md:px-[10%] lg:px-[20%]">
         <div className="">
           {
             // eslint-disable-next-line @next/next/no-img-element
@@ -74,7 +75,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-[150px] bg-[#1D3145] text-white">
+      {/* course */}
+      <section id="course" className="py-20 lg:py-[150px] bg-[#1D3145] text-white">
         <div className="flex justify-end">
           <div className="flex gap-5 items-center">
             <span>سير الهاكاثون</span>
@@ -113,8 +115,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* workshop & award  */}
       <section className="py-[90px] bg-white text-[#243746]">
-        <div className="flex justify-end">
+        <div id="workshop" className="flex justify-end">
           <div className="flex gap-5 items-center">
             <span className="font-bold text-xl">ورش العمل </span>
             <div className="">
@@ -126,12 +129,18 @@ export default function Home() {
         </div>
 
         <div className="mt-16 lg:mt-10 px-5 lg:px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-32 my-20">
-          <Card2 />
-          <Card2 />
-          <Card2 />
+          <Card2
+            id={1}
+          />
+          <Card2
+            id={2}
+          />
+          <Card2
+            id={3}
+          />
         </div>
 
-        <div className="flex justify-end">
+        <div id="award" className="flex justify-end">
           <div className="flex gap-5 items-center">
             <span className="font-bold text-xl">الجوائز</span>
             <div className="">
@@ -179,6 +188,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* REGISTER && FORMATION OF TEAM */}
       <section className="relative bg-[#1D3145] text-white py-[24px] px-5 md:px-[10%] lg:px-[25%] flex justify-center overflow-hidden">
         <div className="absolute top-0 left-0 hidden md:block">
           {
@@ -186,7 +196,7 @@ export default function Home() {
             <img src="/images/sect5LBar.png" alt="" className="w-[90px]" />}
         </div>
         <div className="my-20">
-          <div className="">
+          <div id="register" className="">
             <div className="py-5 text-center w-full bg-white text-[#E7004C] text-2xl font-bold">التسجيل</div>
             <div className="font-bold text-xl my-4" dir="rtl">شروط المشاركة</div>
             <ul className="flex flex-col gap-4" dir="rtl">
@@ -196,10 +206,11 @@ export default function Home() {
               <li>أن تكون فكرة المشاركة في قطاع القهوة ولا تخرج عنها.</li>
             </ul>
             <div className="flex justify-center mt-20">
-              <div className="py-3 px-6 bg-[#E7004C] rounded-[38px] text-white">التسجيل</div>
+              <Link href="#" className="py-3 px-6 bg-[#E7004C] rounded-[38px] text-white">التسجيل</Link>
             </div>
           </div>
-          <div className="mt-[100px] lg:mt-[200px]">
+
+          <div id="formation_of_team" className="mt-[100px] lg:mt-[200px]">
             <div className="py-5 text-center w-full bg-white text-[#E7004C] text-2xl font-bold">تشكيل الفرق</div>
             <p className="mt-4" dir="rtl">بعد تسجيل الأفراد في المنصة وتعبئة الملف الشخصي، يتم تسجيل الفريق وفي حال كنت تبحث عن فريق فبامكانك الضغط على زر تشكيل الفرق وطلب الانضمام إلى أحد الفرق المسجلة أو إنشاء فريق جديد.</p>
             <div className="font-bold text-xl my-4" dir="rtl">خطوات التسجيل</div>
@@ -225,13 +236,14 @@ export default function Home() {
               </ul>
             </div>
             <div className="flex justify-center mt-20">
-              <div className="py-3 px-6 bg-[#E7004C] rounded-[38px] text-white">تشكيل الفرق</div>
+              <Link href="" className="py-3 px-6 bg-[#E7004C] rounded-[38px] text-white">تشكيل الفرق</Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-[90px] px-5 pl-0 lg:pl-5 lg:px-0 bg-white text-[#243746] flex gap-5">
+      {/* FAQ */}
+      <section id="FAQ" className="py-[90px] px-5 pl-0 lg:pl-5 lg:px-0 bg-white text-[#243746] flex gap-5">
         <div className="flex-[6] lg:flex-[3]" dir="rtl">
           <h1 className="font-bold text-2xl mb-8">الاسئلة الشائعة</h1>
           <ul className="flex flex-col gap-4">
@@ -280,7 +292,7 @@ export default function Home() {
         </div>
       </section>
 
-
+      {/* FORM */}
       <section className="py-10 md:py-36 px-3 md:px-20 lgpx-32 bg-center" style={{ backgroundImage: 'url("images/Group 490.png")' }}>
         <form action="" className="mx-auto bg-white rounded-[10px] px-[10px] py-7 text-[#1D3145] flex flex-col gap-3 w-full lg:w-[460px]" onSubmit={(e) => { e.preventDefault() }}>
           <h1 className="text-center text-2xl font-bold mb-5">تواصل معنا</h1>
@@ -294,7 +306,7 @@ export default function Home() {
         </form>
       </section>
 
-
+      {/* SPONSORS */}
       <section className="bg-white flex flex-wrap justify-center gap-10 py-10 px-20 items-center">
         {
           // eslint-disable-next-line @next/next/no-img-element
@@ -319,7 +331,7 @@ export default function Home() {
           {
             // eslint-disable-next-line @next/next/no-img-element
             <img src="/images/twitter.svg" alt="" className="w-[40px]" />}
-          
+
         </div>
         <div className="flex flex-col items-center">
           <p className="text-center text-[#9EA1A1] text-sm">
