@@ -18,7 +18,7 @@ export default function Nav() {
                     <Link href="#FAQ"
                         className='hover:bg-[#E7004C] hover:text-white' dir='rtl'
                         onClick={() => setShowMobileNav(!showMobileNav)}>الاسئلة الشائعة</Link>
-                    <Link href="#formation_of_team"
+                    <Link href="#rf"
                         className='hover:bg-[#E7004C] hover:text-white' dir='rtl'
                         onClick={() => setShowMobileNav(!showMobileNav)}>تشكيل الفرق </Link>
                     <Link href="#register"
@@ -79,7 +79,7 @@ export default function Nav() {
             <div className="flex justify-end items-center gap-5">
                 <div className="hidden lg:flex gap-6 w-full text-lg">
                     <Link href="#FAQ" className="">الاسئلة الشائعة</Link>
-                    <Link href="#formation_of_team" className="">تشكيل الفرق </Link>
+                    <Link href="#rf" className="">تشكيل الفرق </Link>
                     <Link href="#register" className="">التسجيل</Link>
                     <Link href="#award" className="">الجوائز</Link>
                     <Link href="#workshop" className="">ورش العمل</Link>

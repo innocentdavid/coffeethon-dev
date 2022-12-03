@@ -5,7 +5,7 @@ import Nav from "../components/Nav";
 export default function Home() {
   return (
     <>
-      <header className="py-[50px] -h-[10px]" style={{ backgroundImage: 'url("images/headerBG.png")', backgroundPosition: 'center', backgroundSize: 'cover' }}>
+      <header className="py-[50px] -h-[10px] bg-black/60" style={{ backgroundImage: 'url("images/headerBG.png")', backgroundPosition: 'center', backgroundSize: 'cover' }}>
         <Nav />
         <div className="flex justify-between items-center gap-5 lg:gap-32 py-24">
           <div className="">
@@ -157,10 +157,10 @@ export default function Home() {
             <div className="">
               {
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src="/images/sec4num3.svg" alt="" width="70px" />}
+                <img src="/images/sec4num1.svg" alt="" width="70px" />}
             </div>
             <div className="flex flex-col items-center mt-3 gap-1">
-              <h1 className="font-[800] text-xl">40.000</h1>
+              <h1 className="font-[800] text-xl">80.000</h1>
               <p className="" dir="rtl">ريال سعودي</p>
             </div>
           </div>
@@ -179,10 +179,10 @@ export default function Home() {
             <div className="">
               {
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src="/images/sec4num1.svg" alt="" width="70px" />}
+                <img src="/images/sec4num3.svg" alt="" width="70px" />}
             </div>
             <div className="flex flex-col items-center mt-3 gap-1">
-              <h1 className="font-[800] text-xl">80.000</h1>
+              <h1 className="font-[800] text-xl">40.000</h1>
               <p className="" dir="rtl">ريال سعودي</p>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function Home() {
       </section>
 
       {/* REGISTER && FORMATION OF TEAM */}
-      <section id="register" className="relative bg-[#1D3145] text-white py-[24px] px-5 md:px-[10%] lg:px-[25%] flex justify-center overflow-hidden">
+      <section id="rf" className="relative bg-[#1D3145] text-white py-[24px] px-5 md:px-[10%] lg:px-[25%] flex justify-center overflow-hidden">
         <div className="absolute top-0 left-0 hidden md:block">
           {
             // eslint-disable-next-line @next/next/no-img-element
@@ -236,12 +236,12 @@ export default function Home() {
             <div className="py-5 text-center w-full bg-white text-[#E7004C] text-2xl font-Dubai-Bold" dir="rtl">تشكيل الفرق</div>
             <p className="mt-4" dir="rtl">بعد تسجيل الأفراد في المنصة وتعبئة الملف الشخصي، يتم تسجيل الفريق وفي حال كنت تبحث عن فريق فبامكانك الضغط على زر تشكيل الفرق وطلب الانضمام إلى أحد الفرق المسجلة أو إنشاء فريق جديد.</p>
             <div className="font-Dubai-Bold text-xl my-4" dir="rtl">خطوات التسجيل</div>
-            <div className="flex justify-between items-center">
-              <div className="hidden md:block">
-                {/* {
+            <div className="flex justify-end items-center">
+              {/* <div className="hidden md:block">
+                {
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src="/images/sect5box.png" alt="" width="150px" />} */}
-              </div>
+                  <img src="/images/sect5box.png" alt="" width="150px" />}
+              </div> */}
               <ul className="flex flex-col gap-4 items-end">
                 <li>
                   <span className="mr-1" dir="rtl">التسجيل في المنصة بالضغط على زر التسجيل</span> - 1
@@ -267,12 +267,17 @@ export default function Home() {
       {/* FAQ */}
       <section id="FAQ" className="py-[90px] px-6 pl-0 lg:pl-5 lg:px-0 bg-white text-[#243746] flex gap-5" style={{ backgroundImage: 'url("images/section6bg.png")', backgroundSize: 'cover' }}>
         <div className="flex-[6] lg:flex-[3]" dir="rtl">
-          <h1 className="font-Dubai-Bold text-2xl mb-8 flex items-center gap-3" dir="rtl">
+          <div className="flex gap-5">
             {
               // eslint-disable-next-line @next/next/no-img-element
-              <img src="/images/s3bar1.svg" alt="" className="md:hidden h-[10px]" />}الاسئلة الشائعة
-          </h1>
-          <ul className="flex flex-col gap-4">
+              <img src="/images/s3bar1.svg" alt="" className="hidden md:block h-[30px]" />}
+            <h1 className="font-Dubai-Bold text-2xl mb-8 flex items-center gap-3" dir="rtl">
+              {
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src="/images/s3bar1.svg" alt="" className="md:hidden h-[10px]" />}الاسئلة الشائعة
+            </h1>
+          </div>
+          <ul className="flex flex-col gap-4 lg:mr-[265px]">
             <Accordion
               key={1}
               question={'هل يمكنني المشاركة كفرد؟'}
@@ -310,11 +315,6 @@ export default function Home() {
               question={'ما الفوائد المكتسبة من الهاكاثون؟'}
               answer={'سيحصل كل المشاركين على شهادة مشاركة وفرصة زيادة شبكة العلاقات وتعزيز الخبرات شخصية والسير الذاتية.'} />
           </ul>
-        </div>
-        <div className="flex-1 hidden md:flex justify-end items-start">
-          {
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src="/images/s3bar1.svg" alt="" className="h-[30px]" />}
         </div>
       </section>
 
@@ -420,19 +420,19 @@ const Accordion = ({ question, answer }) => {
           // eslint-disable-next-line @next/next/no-img-element
           <img src="images/bullet.png" alt="" className="w-[24px]" />}
         <li className="font-Dubai-Bold text-lg cursor-pointer" dir="rtl">{question}</li>
-        {!openAccordion ? 
-        <>
-        {
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src="images/arrow-down.svg" alt="" className="w-[24px]" />} 
+        {!openAccordion ?
+          <>
+            {
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src="images/arrow-down.svg" alt="" className="w-[24px]" />}
           </>
           :
-        <>
-        {
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src="images/arrow-down.svg" alt="" className="w-[24px] rotate-180" />} 
+          <>
+            {
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src="images/arrow-down.svg" alt="" className="w-[24px] rotate-180" />}
           </>
-          }
+        }
 
       </div>
       <span className={openAccordion ? 'pr-[40px] visible' : 'invisible'}>{answer}</span>
