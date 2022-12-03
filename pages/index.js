@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Nav from "../components/Nav";
@@ -152,7 +153,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-16 md:gap-0 items-center justify-between px-10 md:px-28 lg:px-[350px] mt-28 text-[#243746]">
+        <div className="flex flex-col md:flex-row-reverse gap-16 md:gap-0 items-center justify-between px-10 md:px-28 lg:px-[350px] mt-28 text-[#243746]">
           <div className="flex flex-col justify-center items-center">
             <div className="">
               {
@@ -265,13 +266,13 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section id="FAQ" className="py-[90px] px-6 pl-0 lg:pl-5 lg:px-0 bg-white text-[#243746] flex gap-5" style={{ backgroundImage: 'url("images/section6bg.png")', backgroundSize: 'cover' }}>
+      <section id="FAQ" className="py-[90px] px-6 lg:pl-5 lg:px-0 bg-white text-[#243746] flex gap-5" style={{ backgroundImage: 'url("images/section6bg.png")', backgroundSize: 'cover' }}>
         <div className="flex-[6] lg:flex-[3]" dir="rtl">
           <div className="flex gap-5">
             {
               // eslint-disable-next-line @next/next/no-img-element
               <img src="/images/s3bar1.svg" alt="" className="hidden md:block h-[30px]" />}
-            <h1 className="font-Dubai-Bold text-2xl mb-8 flex items-center gap-3" dir="rtl">
+            <h1 className="font-Dubai-Bold text-2xl w-full mb-8 flex items-center gap-3" dir="rtl">
               {
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src="/images/s3bar1.svg" alt="" className="md:hidden h-[10px]" />}الاسئلة الشائعة
@@ -414,28 +415,54 @@ const Accordion = ({ question, answer }) => {
   const [openAccordion, setOpenAccordion] = useState(false)
 
   return (
-    <div className="">
-      <div className="flex gap-4 items-center" onClick={() => setOpenAccordion(!openAccordion)}>
-        {
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src="images/bullet.png" alt="" className="w-[24px]" />}
-        <li className="font-Dubai-Bold text-lg cursor-pointer" dir="rtl">{question}</li>
-        {!openAccordion ?
-          <>
-            {
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src="images/arrow-down.svg" alt="" className="w-[24px]" />}
-          </>
-          :
-          <>
-            {
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src="images/arrow-down.svg" alt="" className="w-[24px] rotate-180" />}
-          </>
-        }
-
+    <div className="flex items-start gap-4">
+      {
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src="images/bullet.png" alt="" width={24} className="w-[24px]" />}
+      {/* <Image src="/images/bullet.png" alt="" width={44} height={24} /> */}
+      <div className="">
+        <h1 className="flex gap-5" dir="rtl" onClick={() => setOpenAccordion(!openAccordion)}>{question}
+          {openAccordion ?
+            <>
+              {
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src="images/arrow-down.svg" alt="" className="w-[24px]" />}
+            </>
+            :
+            <>
+              {
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src="images/arrow-down.svg" alt="" className="w-[24px] rotate-180" />}
+            </>
+          }
+        </h1>
+        <p className={openAccordion ? 'hidden' : 'block'}>{answer}</p>
       </div>
-      <span className={openAccordion ? 'pr-[40px] visible' : 'invisible'}>{answer}</span>
     </div>
   )
+  // return (
+  //   <div className="">
+  //     <div className="flex gap-4 items-center" onClick={() => setOpenAccordion(!openAccordion)}>
+  //       {
+  //         // eslint-disable-next-line @next/next/no-img-element
+  //         <img src="images/bullet.png" alt="" className="w-[24px]" />}
+  //       <li className="font-Dubai-Bold text-lg cursor-pointer" dir="rtl">{question}</li>
+  //       {!openAccordion ?
+  //         <>
+  //           {
+  //             // eslint-disable-next-line @next/next/no-img-element
+  //             <img src="images/arrow-down.svg" alt="" className="w-[24px]" />}
+  //         </>
+  //         :
+  //         <>
+  //           {
+  //             // eslint-disable-next-line @next/next/no-img-element
+  //             <img src="images/arrow-down.svg" alt="" className="w-[24px] rotate-180" />}
+  //         </>
+  //       }
+
+  //     </div>
+  //     <span className={openAccordion ? 'pr-[40px] visible' : 'invisible'}>{answer}</span>
+  //   </div>
+  // )
 }

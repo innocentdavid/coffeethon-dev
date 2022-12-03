@@ -14,7 +14,7 @@ export default function Nav() {
                 <div className="absolute top-8 left-10 font-Dubai-Bold py-1 px-3 bg-[#E7004C] text-white cursor-pointer"
                     onClick={() => setShowMobileNav(!showMobileNav)}>X</div>
 
-                <div className="flex flex-col gap-8 font-Dubai-Bold text-xl" dir='rtl'>
+                <div className="flex flex-col-reverse gap-8 font-Dubai-Bold text-xl" dir='rtl'>
                     <Link href="#FAQ"
                         className='hover:bg-[#E7004C] hover:text-white' dir='rtl'
                         onClick={() => setShowMobileNav(!showMobileNav)}>الاسئلة الشائعة</Link>
