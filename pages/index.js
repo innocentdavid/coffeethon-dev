@@ -153,7 +153,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row-reverse gap-16 md:gap-0 items-center justify-between px-10 md:px-28 lg:px-[350px] mt-28 text-[#243746]">
+        <div className="flex flex-col md:flex-row-reverse gap-16 md:gap-0 items-center justify-between px-10 md:px-28 lg:px-[20%] mt-28 text-[#243746]">
+          
           <div className="flex flex-col justify-center items-center">
             <div className="">
               {
