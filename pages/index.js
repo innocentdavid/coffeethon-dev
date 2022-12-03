@@ -1,9 +1,47 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 
 export default function Home() {
+  const countDown = (countDate) => {
+    if (!countDate) return;
+    console.log(countDate);
+    var now = new Date().getTime();
+    var gap = countDate - now;
+    var second = 1000;
+    var minute = second * 60;
+    var hour = minute * 60;
+    var day = hour * 24;
+
+    var d = Math.floor(gap / day);
+    var h = Math.floor((gap % day) / hour);
+    var m = Math.floor((gap % hour) / minute);
+    var s = Math.floor((gap % minute) / second);
+
+    const dayN = document.getElementById("day");
+    if (dayN && d >= 0) {
+      dayN.innerText = d;
+    }
+    const hourN = document.getElementById("hour");
+    if (hourN && h >= 0) {
+      hourN.innerText = h;
+    }
+    const minuteN = document.getElementById("minute");
+    if (minuteN && m >= 0) {
+      minuteN.innerText = m;
+    }
+    // const secondN = document.getElementById("second");
+    // if (secondN && s >= 0) {
+    //   secondN.innerText = s;
+    // }
+  };
+
+  useEffect(() => {
+    countDown(new Date('2022/12/28'))
+  }, [])
+  
+
   return (
     <>
       <header className="py-[50px] -h-[10px] bg-black/60" style={{ backgroundImage: 'url("images/headerBG.png")', backgroundPosition: 'center', backgroundSize: 'cover' }}>
@@ -30,9 +68,9 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center">
           <p className="text-white mb-10">الوقت المتبقي</p>
           <div className="flex gap-5">
-            <div className="w-[54px] h-[76px] border border-white bg-[#E7004C]/50 text-white font-Dubai-Bold rounded-[12px] grid place-items-center text-xl">1</div>
-            <div className="w-[54px] h-[76px] border border-white bg-[#E7004C]/50 text-white font-Dubai-Bold rounded-[12px] grid place-items-center text-xl">22</div>
-            <div className="w-[54px] h-[76px] border border-white bg-[#E7004C]/50 text-white font-Dubai-Bold rounded-[12px] grid place-items-center text-xl">45</div>
+            <div className="w-[54px] h-[76px] border border-white bg-[#E7004C]/50 text-white font-Dubai-Bold rounded-[12px] grid place-items-center text-xl" id="day">0</div>
+            <div className="w-[54px] h-[76px] border border-white bg-[#E7004C]/50 text-white font-Dubai-Bold rounded-[12px] grid place-items-center text-xl" id="hour">0</div>
+            <div className="w-[54px] h-[76px] border border-white bg-[#E7004C]/50 text-white font-Dubai-Bold rounded-[12px] grid place-items-center text-xl" id="minute">0</div>
           </div>
         </div>
       </header>
@@ -276,7 +314,7 @@ export default function Home() {
             <h1 className="font-Dubai-Bold text-2xl w-full mb-8 flex items-center gap-3" dir="rtl">
               {
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src="/images/s3bar1.svg" alt="" className="md:hidden h-[10px]" />}الاسئلة الشائعة
+                <img src="/images/s3bar1.svg" alt="" className="md:hidden h-[20px]" />}الاسئلة الشائعة
             </h1>
           </div>
           <ul className="flex flex-col gap-4 lg:mr-[265px]">
