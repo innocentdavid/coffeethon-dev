@@ -15,26 +15,26 @@ export default function Nav() {
                     onClick={() => setShowMobileNav(!showMobileNav)}>X</div>
 
                 <div className="flex flex-col gap-8 font-bold text-xl" dir='rtl'>
-                    <Link href="#"
-                        className='hover:bg-[#E7004C] hover:text-white'
+                    <Link href="#FAQ"
+                        className='hover:bg-[#E7004C] hover:text-white' dir='rtl'
                         onClick={() => setShowMobileNav(!showMobileNav)}>الاسئلة الشائعة</Link>
-                    <Link href="#"
-                        className='hover:bg-[#E7004C] hover:text-white'
+                    <Link href="#formation_of_team"
+                        className='hover:bg-[#E7004C] hover:text-white' dir='rtl'
                         onClick={() => setShowMobileNav(!showMobileNav)}>تشكيل الفرق </Link>
-                    <Link href="#"
-                        className='hover:bg-[#E7004C] hover:text-white'
+                    <Link href="#register"
+                        className='hover:bg-[#E7004C] hover:text-white' dir='rtl'
                         onClick={() => setShowMobileNav(!showMobileNav)}>التسجيل</Link>
-                    <Link href="#"
-                        className='hover:bg-[#E7004C] hover:text-white'
+                    <Link href="#award"
+                        className='hover:bg-[#E7004C] hover:text-white' dir='rtl'
                         onClick={() => setShowMobileNav(!showMobileNav)}>الجوائز</Link>
-                    <Link href="#"
-                        className='hover:bg-[#E7004C] hover:text-white'
+                    <Link href="#workshop"
+                        className='hover:bg-[#E7004C] hover:text-white' dir='rtl'
                         onClick={() => setShowMobileNav(!showMobileNav)}>ورش العمل</Link>
-                    <Link href="#"
-                        className='hover:bg-[#E7004C] hover:text-white'
+                    <Link href="#course"
+                        className='hover:bg-[#E7004C] hover:text-white' dir='rtl'
                         onClick={() => setShowMobileNav(!showMobileNav)}>سير الهاكاثون</Link>
-                    <Link href="#"
-                        className='hover:bg-[#E7004C] hover:text-white'
+                    <Link href="#about"
+                        className='hover:bg-[#E7004C] hover:text-white' dir='rtl'
                         onClick={() => setShowMobileNav(!showMobileNav)}>نبذه عن الهاكاثون</Link>
 
                     <div className="flex flex-col gap-5">
@@ -89,7 +89,7 @@ export default function Nav() {
                 <Link href="/" className="">
                     {
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src="/images/logo01.png" alt="" width="90px" />}
+                        <img src="/images/logo01.png" alt="" className='w-[50px] w-[60px] lg:w-[90px]' />}
                 </Link>
             </div>
         </div>
