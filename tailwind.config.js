@@ -5,7 +5,17 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    // extend: {},
+    fontFamily: {
+      'Dubai-Regular': ['Dubai-Regular', 'sans-serif'],
+      'Dubai-Bold': ['Dubai-Bold', 'sans-serif'],
+    },
   },
   plugins: [],
+  // purge: {
+  //   enabled: true,
+  //   content: [
+  //     './**/*.html'
+  //   ]
+  // },
 }

@@ -11,10 +11,10 @@ export default function Nav() {
                 onClick={() => setShowMobileNav(!showMobileNav)}></div>
             <div className="fixed top-0 right-0 w-[300px] h-screen bg-white/75 py-20 px-12">
 
-                <div className="absolute top-8 left-10 font-bold py-1 px-3 bg-[#E7004C] text-white cursor-pointer"
+                <div className="absolute top-8 left-10 font-Dubai-Bold py-1 px-3 bg-[#E7004C] text-white cursor-pointer"
                     onClick={() => setShowMobileNav(!showMobileNav)}>X</div>
 
-                <div className="flex flex-col gap-8 font-bold text-xl" dir='rtl'>
+                <div className="flex flex-col gap-8 font-Dubai-Bold text-xl" dir='rtl'>
                     <Link href="#FAQ"
                         className='hover:bg-[#E7004C] hover:text-white' dir='rtl'
                         onClick={() => setShowMobileNav(!showMobileNav)}>الاسئلة الشائعة</Link>
@@ -89,7 +89,7 @@ export default function Nav() {
                 <Link href="/" className="">
                     {
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src="/images/logo01.png" alt="" className='w-[50px] w-[60px] lg:w-[90px]' />}
+                        <img src="/images/logo01.png" alt="" className='w-[50px] md:w-[60px] lg:w-[90px]' />}
                 </Link>
             </div>
         </div>

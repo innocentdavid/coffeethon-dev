@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @import url('https://fonts.cdnfonts.com/css/dubai'); */
+
+@font-face {
+    font-family: "Dubai-Regular";
+    src: url("../public/fonts/Dubai-Regular.ttf");
+}
+@font-face {
+    font-family: "Dubai-Bold";
+    src: url("../public/fonts/Dubai-Bold.ttf");
+}
+
+@layer base {
+    html {
+        @apply font-Dubai-Regular;
+    }
+}

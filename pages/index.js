@@ -5,7 +5,7 @@ import Nav from "../components/Nav";
 export default function Home() {
   return (
     <>
-      <header className="py-[50px] -h-[10px]" style={{ backgroundImage: 'url("images/headerBG.png")', backgroundPosition: 'center center', backgroundSize: 'cover' }}>
+      <header className="py-[50px] -h-[10px]" style={{ backgroundImage: 'url("images/headerBG.png")', backgroundPosition: 'center', backgroundSize: 'cover' }}>
         <Nav />
         <div className="flex justify-between items-center gap-5 lg:gap-32 py-24">
           <div className="">
@@ -29,9 +29,9 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center">
           <p className="text-white mb-10">الوقت المتبقي</p>
           <div className="flex gap-5">
-            <div className="w-[54px] h-[76px] border border-white bg-[#E7004C]/50 text-white font-bold rounded-[12px] grid place-items-center text-xl">1</div>
-            <div className="w-[54px] h-[76px] border border-white bg-[#E7004C]/50 text-white font-bold rounded-[12px] grid place-items-center text-xl">22</div>
-            <div className="w-[54px] h-[76px] border border-white bg-[#E7004C]/50 text-white font-bold rounded-[12px] grid place-items-center text-xl">45</div>
+            <div className="w-[54px] h-[76px] border border-white bg-[#E7004C]/50 text-white font-Dubai-Bold rounded-[12px] grid place-items-center text-xl">1</div>
+            <div className="w-[54px] h-[76px] border border-white bg-[#E7004C]/50 text-white font-Dubai-Bold rounded-[12px] grid place-items-center text-xl">22</div>
+            <div className="w-[54px] h-[76px] border border-white bg-[#E7004C]/50 text-white font-Dubai-Bold rounded-[12px] grid place-items-center text-xl">45</div>
           </div>
         </div>
       </header>
@@ -45,7 +45,7 @@ export default function Home() {
             <img src="/images/sec2bar.png" alt="" className="w-full" />}
         </div>
         <div className="">
-          <div className="text-center py-3 bg-[#243746] text-white" dir="rtl">هاكاثون القهوة </div>
+          <div className="text-center py-3 bg-[#243746] text-white font-Dubai-Bold" dir="rtl">هاكاثون القهوة </div>
         </div>
 
         <p className="text-center mt-7" dir="rtl">
@@ -80,7 +80,7 @@ export default function Home() {
       <section id="course" className="py-20 lg:py-[150px] bg-[#1D3145] text-white">
         <div className="flex justify-end">
           <div className="flex gap-5 items-center">
-            <span dir="rtl">سير الهاكاثون</span>
+            <span dir="rtl" className="font-Dubai-Bold text-xl">سير الهاكاثون</span>
             <div className="">
               {
                 // eslint-disable-next-line @next/next/no-img-element
@@ -99,7 +99,7 @@ export default function Home() {
 
         <div className="flex justify-end lg:-mt-[50px] mb-24">
           <div className="flex gap-5 items-center">
-            <span dir="rtl">مسارات الهاكاثون</span>
+            <span dir="rtl" className="font-Dubai-Bold text-xl">مسارات الهاكاثون</span>
             <div className="">
               {
                 // eslint-disable-next-line @next/next/no-img-element
@@ -120,7 +120,7 @@ export default function Home() {
       <section className="py-[90px] bg-white text-[#243746]" style={{ backgroundImage: 'url("images/section4bg.png")', backgroundSize: 'cover' }}>
         <div id="workshop" className="flex justify-end">
           <div className="flex gap-5 items-center">
-            <span className="font-bold text-xl" dir="rtl">ورش العمل </span>
+            <span className="font-Dubai-Bold text-xl" dir="rtl">ورش العمل </span>
             <div className="">
               {
                 // eslint-disable-next-line @next/next/no-img-element
@@ -143,7 +143,7 @@ export default function Home() {
 
         <div id="award" className="flex justify-end">
           <div className="flex gap-5 items-center">
-            <span className="font-bold text-xl" dir="rtl">الجوائز</span>
+            <span className="font-Dubai-Bold text-xl" dir="rtl">الجوائز</span>
             <div className="">
               {
                 // eslint-disable-next-line @next/next/no-img-element
@@ -198,8 +198,8 @@ export default function Home() {
         </div>
         <div className="my-20">
           <div className="">
-            <div className="py-5 text-center w-full bg-white text-[#E7004C] text-2xl font-bold" dir="rtl">التسجيل</div>
-            <div className="font-bold text-xl my-4" dir="rtl">شروط المشاركة</div>
+            <div className="py-5 text-center w-full bg-white text-[#E7004C] text-2xl font-Dubai-Bold" dir="rtl">التسجيل</div>
+            <div className="font-Dubai-Bold text-xl my-4" dir="rtl">شروط المشاركة</div>
             {/* <ul className="flex flex-col gap-4 pr-8" dir="rtl" style={{ listStyleImage: `url("images/bullet.png")` }}> */}
             <ul className="flex flex-col gap-4" dir="rtl">
               <div className="flex items-center gap-4" dir="rtl">
@@ -233,9 +233,9 @@ export default function Home() {
           </div>
 
           <div id="formation_of_team" className="mt-[100px] lg:mt-[200px]">
-            <div className="py-5 text-center w-full bg-white text-[#E7004C] text-2xl font-bold" dir="rtl">تشكيل الفرق</div>
+            <div className="py-5 text-center w-full bg-white text-[#E7004C] text-2xl font-Dubai-Bold" dir="rtl">تشكيل الفرق</div>
             <p className="mt-4" dir="rtl">بعد تسجيل الأفراد في المنصة وتعبئة الملف الشخصي، يتم تسجيل الفريق وفي حال كنت تبحث عن فريق فبامكانك الضغط على زر تشكيل الفرق وطلب الانضمام إلى أحد الفرق المسجلة أو إنشاء فريق جديد.</p>
-            <div className="font-bold text-xl my-4" dir="rtl">خطوات التسجيل</div>
+            <div className="font-Dubai-Bold text-xl my-4" dir="rtl">خطوات التسجيل</div>
             <div className="flex justify-between items-center">
               <div className="hidden md:block">
                 {/* {
@@ -267,7 +267,7 @@ export default function Home() {
       {/* FAQ */}
       <section id="FAQ" className="py-[90px] px-6 pl-0 lg:pl-5 lg:px-0 bg-white text-[#243746] flex gap-5" style={{ backgroundImage: 'url("images/section6bg.png")', backgroundSize: 'cover' }}>
         <div className="flex-[6] lg:flex-[3]" dir="rtl">
-          <h1 className="font-bold text-2xl mb-8 flex items-center gap-3" dir="rtl">
+          <h1 className="font-Dubai-Bold text-2xl mb-8 flex items-center gap-3" dir="rtl">
             {
               // eslint-disable-next-line @next/next/no-img-element
               <img src="/images/s3bar1.svg" alt="" className="md:hidden h-[10px]" />}الاسئلة الشائعة
@@ -321,7 +321,7 @@ export default function Home() {
       {/* FORM */}
       <section className="py-10 md:py-36 px-3 md:px-20 lgpx-32 bg-center" style={{ backgroundImage: 'url("images/Group 490.png")' }}>
         <form action="" className="mx-auto bg-white rounded-[10px] px-[10px] py-7 text-[#1D3145] flex flex-col gap-3 w-full lg:w-[460px]" onSubmit={(e) => { e.preventDefault() }}>
-          <h1 className="text-center text-2xl font-bold mb-5">تواصل معنا</h1>
+          <h1 className="text-center text-2xl font-Dubai-Bold mb-5">تواصل معنا</h1>
           <input type="text" className="bg-[#9EA1A1]/50 text-white border-none outline-none rounded-[8px] px-5 h-[40px] w-full" placeholder="الاسم" dir="rtl" />
           <input type="text" className="bg-[#9EA1A1]/50 text-white border-none outline-none rounded-[8px] px-5 h-[40px] w-full" placeholder="البريد الالكتروني" dir="rtl" />
           <textarea type="text" className="resize-none bg-[#9EA1A1]/50 text-white border-none outline-none rounded-[8px] px-5 py-3 h-[90px] w-full" placeholder="رسالتك…." dir="rtl"></textarea>
@@ -361,9 +361,9 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-center">
           <p className="text-center text-[#9EA1A1] text-sm">
-            <span className="font-bold">@COFFEETHON </span>
+            <span className="font-Dubai-Bold">@COFFEETHON </span>
             Copyright
-            <span className="font-bold"> 2022</span>
+            <span className="font-Dubai-Bold"> 2022</span>
           </p>
           <p className="text-center text-[#9EA1A1] text-sm">All Rights Reserved</p>
         </div>
@@ -386,7 +386,7 @@ const Card1 = () => {
           // eslint-disable-next-line @next/next/no-img-element
           <img src="/images/various-grains-bags-grocery-store-market.png" alt="" className="w-full" />}
       </div>
-      <div className="mt-2 font-bold text-xl text-[#E7004C] text-center" dir="rtl">الاستيراد والتصدير</div>
+      <div className="mt-2 font-Dubai-Bold text-xl text-[#E7004C] text-center" dir="rtl">الاستيراد والتصدير</div>
       <p className="text-center mt-5" dir="rtl">
         تسهيل عملية الاستيراد من كافة دول العالم ودعم المحامص والموزعين المحليين لتصدير منتجاتهم.
       </p>
@@ -402,7 +402,7 @@ const Card2 = () => {
           // eslint-disable-next-line @next/next/no-img-element
           <img src="/images/card2img1.svg" alt="" width="180px" />}
       </div>
-      <div className="mt-2 font-bold text-xl text-[#E7004C] text-center" dir="rtl">عرض المشاريع</div>
+      <div className="mt-2 font-Dubai-Bold text-xl text-[#E7004C] text-center" dir="rtl">عرض المشاريع</div>
       <p className="text-center mt-5" dir="rtl">
         النقاط الرئيسية في عرض المشاريع وجلب المستثمرين.
       </p>
@@ -419,7 +419,7 @@ const Accordion = ({ question, answer }) => {
         {
           // eslint-disable-next-line @next/next/no-img-element
           <img src="images/bullet.png" alt="" className="w-[24px]" />}
-        <li className="font-bold text-lg cursor-pointer" dir="rtl">{question}</li>
+        <li className="font-Dubai-Bold text-lg cursor-pointer" dir="rtl">{question}</li>
         {!openAccordion ? 
         <>
         {

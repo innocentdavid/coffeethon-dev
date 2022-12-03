@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }) {
       <title>COFFEETHON</title>
       <meta name="description" content="COFFEETHON" />
       <link rel="icon" href="/favicon.ico" />
+      {/* <link href="https://fonts.cdnfonts.com/css/dubai" rel="stylesheet" /> */}
     </Head>
     <Component {...pageProps} />
   </>)
