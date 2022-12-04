@@ -80,7 +80,6 @@ export default function Home() {
       </header>
 
       {/* ABOUT */}
-      {/* <section id="about" className="bg-white text-[#243746] py-20 lg:py-32 px-[5%] md:px-[10%] lg:px-[20%]" style={{ background: 'linear-gradient(rgba(255,255,255,.15),rgba(255,255,255,.15) ), url("images/sectiont2bg.png")' }}> */}
       <section id="about" className="bg-white text-[#243746] py-20 lg:py-32 px-[5%] md:px-[10%] lg:px-[20%]" style={{ backgroundImage: 'url("images/sectiont2bg.png")', backgroundSize: 'cover' }}>
         <div className="">
           {
@@ -464,7 +463,7 @@ const Accordion = ({ question, answer }) => {
         <img src="images/bullet.png" alt="" width={24} className="w-[24px]" />}
       {/* <Image src="/images/bullet.png" alt="" width={44} height={24} /> */}
       <div className="">
-        <h1 className="flex gap-5" dir="rtl" onClick={() => setOpenAccordion(!openAccordion)}>{question}
+        <h1 className="flex gap-5 font-Dubai-Bold text-lg cursor-pointer" dir="rtl" onClick={() => setOpenAccordion(!openAccordion)}>{question}
           {openAccordion ?
             <>
               {
