@@ -27,7 +27,7 @@ export default function Nav() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    return (<div id='navBar' className='sticky top-5 left-0 w-full z-50'>
+    return (<div id='navBar' className='sticky top-5 py-3 left-0 w-full z-50'>
         {showMobileNav && <div className="fixed z-50">
             <div className="fixed top-0 left-0 w-full h-screen bg-black/30 backdrop-blur-sm"
                 onClick={() => setShowMobileNav(!showMobileNav)}></div>
