@@ -6,7 +6,8 @@ import Nav from "../components/Nav";
 export default function Home() {
   const countDown = (countDate) => {
     if (!countDate) return;
-    console.log(countDate);
+    if (!window) return;
+    // console.log(countDate);
     var now = new Date().getTime();
     var gap = countDate - now;
     var second = 1000;
@@ -39,13 +40,16 @@ export default function Home() {
 
   useEffect(() => {
     countDown(new Date('2022/12/28'))
+    setInterval(() => {
+      countDown(new Date('2022/12/28'))
+    }, 1000);
   }, [])
-  
+
 
   return (
     <>
-      <header className="py-[50px] -h-[10px] bg-black/60" style={{ backgroundImage: 'url("images/headerBG.png")', backgroundPosition: 'center', backgroundSize: 'cover' }}>
-        <Nav />
+      <Nav />
+      <header className="py-[50px] pt-[190px] -mt-[100px] h-screen bg-black/60" style={{ backgroundImage: 'url("images/headerBG.png")', backgroundPosition: 'center', backgroundSize: 'cover' }}>
         <div className="flex justify-between items-center gap-5 lg:gap-32 py-24">
           <div className="">
             {
@@ -192,7 +196,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col md:flex-row-reverse gap-16 md:gap-0 items-center justify-between px-10 md:px-28 lg:px-[20%] mt-28 text-[#243746]">
-          
+
           <div className="flex flex-col justify-center items-center">
             <div className="">
               {

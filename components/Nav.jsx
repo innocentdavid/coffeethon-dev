@@ -1,11 +1,33 @@
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Nav() {
     const [showMobileNav, setShowMobileNav] = useState(false)
     const [isLoggedIn, setIsLoggedIn] = useState(false)
 
-    return (<>
+    useEffect(() => {
+        const handleScroll = () => {
+            let navBar = document.querySelector('#navBar');
+            if (navBar && window.scrollY > 100) {
+                navBar?.classList.remove("top-5");
+                navBar?.classList.add("top-0", "bg-black/50");
+            } else {
+                navBar?.classList.remove("top-0", "bg-black/50");
+                navBar?.classList.add("top-5");
+            }
+        };
+
+        handleScroll();
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    return (<div id='navBar' className='sticky top-5 left-0 w-full z-50'>
         {showMobileNav && <div className="fixed z-50">
             <div className="fixed top-0 left-0 w-full h-screen bg-black/30 backdrop-blur-sm"
                 onClick={() => setShowMobileNav(!showMobileNav)}></div>
@@ -93,5 +115,5 @@ export default function Nav() {
                 </Link>
             </div>
         </div>
-    </>)
+    </div>)
 }
