@@ -58,8 +58,8 @@ export default function Nav() {
                     <Link href="#about"
                         className='hover:bg-[#E7004C] hover:text-white' dir='rtl'
                         onClick={() => setShowMobileNav(!showMobileNav)}>نبذه عن الهاكاثون</Link>
-
-                    <div className="flex flex-col gap-5">
+                </div>
+                    <div className="flex flex-col items-end mt-8 gap-5">
                         {isLoggedIn ? <div className='flex items-center gap-5'>
                             {
                                 // eslint-disable-next-line @next/next/no-img-element
@@ -72,7 +72,6 @@ export default function Nav() {
                             <div className="w-[160px] h-[50px] cursor-pointer grid place-items-center text-lg rounded-[29px] bg-[#E7004C] text-white">تسجيل جديد</div>
                         </>}
                     </div>
-                </div>
             </div>
         </div>}
 
